@@ -13,3 +13,7 @@ This forward-thinking umm, yolo approach is none the less fun to program and wri
 Chromebooks embody a philosophy that champions collaboration and inclusivity. Whether you are collaborating on a document in real-time, 
 seamlessly transitioning between apps, or effortlessly sharing your creations, the Chromebook fosters an environment of codeing.
 
+Chromebooks can be considered microcomputers due to their small form factor, limited hardware resources, and focus on simplicity and affordability.
+From tape drives to cloud-based storage? Chromebooks rely heavily on cloud-based services for storage, productivity applications, and software distribution. 
+This approach reduces the need for local storage and computing power, aligning with the concept of microcomputers, which often relied on external storage and minimal onboard processing capabilities.
+
