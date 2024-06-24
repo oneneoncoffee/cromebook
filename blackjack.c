@@ -3,6 +3,7 @@
 //* By Johnny Buckallew Stroud    Project finish date: 6/24/2024              *
 //* NOTES: Will have to remake this code in a text based game.                *
 //*****************************************************************************
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
