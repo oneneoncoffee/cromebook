@@ -1,8 +1,8 @@
-#include <stdio.h>        // Project Magpie 
-#include <stdlib.h>       // A Text only Screen saver,  
-#include <unistd.h>       // 227 lines of funny looking code.
-#include <termios.h>      // Tested on the cromebook and ubuntu..
-#include <sys/ioctl.h>    // fully tested on bash, zsh and fish.
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <termios.h>
+#include <sys/ioctl.h>
 #include <fcntl.h>
 #include <time.h>
 #include <signal.h>

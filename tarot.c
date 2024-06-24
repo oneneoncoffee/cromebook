@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdbool.h>
+
 #define TOTAL_CARDS 78
 #define MAX_CARD_VALUE 6
 #define INITIAL_DRAW 1

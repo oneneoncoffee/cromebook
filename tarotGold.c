@@ -1,6 +1,6 @@
-// Based on the classic Tarot Gold board game deck of 78 cards.  
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 // Struct to hold a tarot card
@@ -17,9 +17,8 @@ void clearScreen() {
 
 // Function to print a random welcome message
 void printWelcomeMessage() {
-    char *messages[] = {       
-        "Welcome to your tarot card reading!", 
-        "Welcome to your tarot card reading! Let's discover the secrets of the universe together.",
+    char *messages[] = {
+       "Welcome to your tarot card reading! Let's discover the secrets of the universe together.",
         "Greetings! May the wisdom of the tarot illuminate your path.",
         "Hello! Prepare to embark on a journey of self-discovery with the tarot as your guide.",
         "Welcome! The tarot cards await, ready to reveal the mysteries of your destiny.",
@@ -27,11 +26,11 @@ void printWelcomeMessage() {
         "Greetings, seeker! Let the ancient wisdom of the tarot reveal what the future holds for you.",
         "Hello, friend! Get ready to explore the depths of your subconscious through the wisdom of the tarot.",
         "Welcome, traveler! The tarot cards are poised to unravel the threads of fate that bind us all.",
-        "Greetings, fellow adventurer! Prepare to delve into the realms of possibility with the tarot as your map.",       
+        "Greetings, fellow adventurer! Prepare to delve into the realms of possibility with the tarot as your map.",
+        "Hello, curious soul! The tarot beckons, offering glimpses into the tapestry of your existence.",
+        "Welcome to your tarot card reading!",
         "Greetings! Let's unveil your destiny.",
-        "What do the cards have in store for you today?",
         "Hello! What do the cards have in store for you today?",
-        "Let's discover what the future may hold today.",
         "Welcome! Let's discover what the future holds."
     };
     int numMessages = sizeof(messages) / sizeof(messages[0]);
@@ -80,7 +79,7 @@ void drawTarotCards(TarotCard deck[], int numCards) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     srand((unsigned int)time(NULL));
 
     clearScreen();
@@ -168,6 +167,17 @@ TarotCard deck[78] = {
     {"King of Pentacles", "Wealth, business, leadership, security, discipline, abundance"}
 };
     int numCards;
+    if (argc > 1 && strcmp(argv[1], "--default5") == 0) {
+        numCards = 5;
+        printf("Drawing 5 cards:\n");
+        shuffleDeck(deck, 78);
+        drawTarotCards(deck, numCards);
+        exit(0);
+    }
+    if (argc > 1 && strcmp(argv[1], "--default3") == 0) {
+        numCards = 3;
+        printf("Drawing  3 cards:\n");
+} else {
     printf("Would you like to draw a standard 3 or 5 card draw? \n(Enter 3 or 5, or any other number for a custom draw): ");
     scanf("%d", &numCards);
         // Check if the user wants a standard draw
@@ -183,9 +193,9 @@ TarotCard deck[78] = {
         printf("Invalid number of cards. Please enter a number between 1 and 78.\n");
         return 1;
     }
+   }
     // Shuffle and draw cards
     shuffleDeck(deck, 78);
     drawTarotCards(deck, numCards);
-
     return 0;
 }

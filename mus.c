@@ -1,4 +1,4 @@
-/ Rewrite of the version for the Orange Pi Zero 3,
+// Rewrite of the version for the Orange Pi Zero 3,
 // Cromebook version 3.6c
 
 #include <stdio.h>
